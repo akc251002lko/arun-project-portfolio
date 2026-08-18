@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Typing Test | Arun Kumar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container glass">
+    <div id="start-screen" class="start-screen">
+      <h1 class="title">⌨️ Developer Typing Test</h1>
+      <p class="subtitle">Test your typing speed with programming-themed text.</p>
+      <div class="instructions">
+        <h3>📋 Instructions</h3>
+        <ul>
+          <li>You will have <strong>30 seconds</strong> to type the passage shown.</li>
+          <li>Type exactly as displayed — including capitalization, symbols, and spacing.</li>
+          <li>Your speed (WPM) and accuracy will be calculated in real time.</li>
+          <li>The test starts when you click <strong>Start Test</strong> and begins with your first keystroke.</li>
+        </ul>
+      </div>
+      <button id="start-btn" class="btn btn-primary">Start Test</button>
+    </div>
+
+    <div id="typing-area" class="typing-area hidden">
+      <div class="stats-row">
+        <div class="stat-box"><span class="stat-label">Time Left</span><span id="timer" class="stat-value">30s</span></div>
+        <div class="stat-box"><span class="stat-label">WPM</span><span id="wpm" class="stat-value">0</span></div>
+        <div class="stat-box"><span class="stat-label">Accuracy</span><span id="accuracy" class="stat-value">100%</span></div>
+      </div>
+      <div id="code-area" class="code-area" tabindex="0">
+        <pre id="code-display" class="code-display"></pre>
+        <input id="hidden-input" class="hidden-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" />
+      </div>
+    </div>
+
+    <div id="results-modal" class="modal-overlay hidden">
+      <div class="modal glass">
+        <h2 class="modal-title">Time's Up!</h2>
+        <div class="results-grid">
+          <div class="result-item"><span class="result-label">Final WPM</span><span id="final-wpm" class="result-value">0</span></div>
+          <div class="result-item"><span class="result-label">Accuracy</span><span id="final-accuracy" class="result-value">100%</span></div>
+          <div class="result-item"><span class="result-label">Time Used</span><span id="final-time" class="result-value">0s</span></div>
+          <div class="result-item"><span class="result-label">Total Characters Typed</span><span id="total-chars" class="result-value">0</span></div>
+          <div class="result-item"><span class="result-label">Correct Characters</span><span id="correct-chars" class="result-value">0</span></div>
+          <div class="result-item"><span class="result-label">Incorrect Characters</span><span id="incorrect-chars" class="result-value">0</span></div>
+          <div class="result-item"><span class="result-label">Total Keystrokes</span><span id="total-keystrokes" class="result-value">0</span></div>
+          <div class="result-item"><span class="result-label">Correct Words</span><span id="correct-words" class="result-value">0</span></div>
+          <div class="result-item"><span class="result-label">Incorrect Words</span><span id="incorrect-words" class="result-value">0</span></div>
+        </div>
+        <button id="try-again-btn" class="btn btn-primary">Try Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
